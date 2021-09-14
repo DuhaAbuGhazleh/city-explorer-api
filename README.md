@@ -42,6 +42,7 @@ Actual time needed to complete: 4hr
 
 
 3. Errors (revisited): As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
+
 Estimate of time needed to complete:2hr
 
 Start time: 7pm
@@ -49,6 +50,29 @@ Start time: 7pm
 Finish time:11pm
 
 Actual time needed to complete: 4hr
+
+4-  Procure an API key from the weather API provider, if you haven't already.
+
+Estimate of time needed to complete:30 min
+
+Start time: 2:30pm
+
+Finish time:3pm
+
+Actual time needed to complete: 30min
+
+5- Add an environment variable named `WEATHER_API_KEY` to your server, and use it appropriately in your code.
+
+Estimate of time needed to complete:30 min
+
+Start time: 2:30pm
+
+Finish time:3pm
+
+Actual time needed to complete: 30min
+
+
+
 
 
 ## Credit and Collaborations
