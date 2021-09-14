@@ -17,40 +17,40 @@ app.get('/',(req,res)=>{
 });
 
 
-class Forecast {
-    constructor(date, description) {
-      this.date = date;
-      this.description = description;
-    }
-  }
+// class Forecast {
+//     constructor(date, description) {
+//       this.date = date;
+//       this.description = description;
+//     }
+//   }
   
-  app.get("/weather-array", (req, res) => {
-    let lat=Number(req.query.lat);
-        let lon=Number(req.query.lon);
+//   app.get("/weather-array", (req, res) => {
+//     let lat=Number(req.query.lat);
+//         let lon=Number(req.query.lon);
 
 
-    const searchQuery = req.query.city_name;
+//     const searchQuery = req.query.city_name;
   
-    const checkArray = weather.find((item) => {
-      return item.city_name.toLowerCase() === searchQuery;
-    });
+//     const checkArray = weather.find((item) => {
+//       return item.city_name.toLowerCase() === searchQuery;
+//     });
   
-    if (checkArray&&lat&&lon) {
-      let newArray = checkArray.data.map((item) => {
-        return new Forecast(item.datetime, item.weather.description);
-      });
-      res.json(newArray);
+//     if (checkArray&&lat&&lon) {
+//       let newArray = checkArray.data.map((item) => {
+//         return new Forecast(item.datetime, item.weather.description);
+//       });
+//       res.json(newArray);
 
-      if(searchQuery !=='Paris'&& searchQuery!=='Seattle'&& searchQuery!=='Amman'){
-            res.status(500).send("please provide correct query params");
+//       if(searchQuery !=='Paris'&& searchQuery!=='Seattle'&& searchQuery!=='Amman'){
+//             res.status(500).send("please provide correct query params");
         
-        }
+//         }
 
-    } else {
-        res.status(500).send("please provide correct query params");
-    }
+//     } else {
+//         res.status(500).send("please provide correct query params");
+//     }
     
-  });
+//   });
 //app.listen(PORT, () => {});
 
 
