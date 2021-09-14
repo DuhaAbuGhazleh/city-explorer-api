@@ -1,29 +1,56 @@
 # city-explorer-api
 
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Author**:Duha abu ghazleh
+**Version**: 1.0.0 
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+ building my own custom API server, which will provide data for the City Explorer front-end application
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+Weather (placeholder): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+react app
+trello
+server.js
+express
+
 
 ## Change Log
 
-Name of feature: ________________________________
+1. Name of feature:Set up your server repository.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete:15min
 
-Start time: _____
+Start time: 2:30pm 
 
-Finish time: _____
+Finish time:3:45pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 15min
+
+2. Weather (placeholder): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip.
+
+Estimate of time needed to complete:2hr
+
+Start time: 3pm
+
+Finish time:7pm
+
+Actual time needed to complete: 4hr
+
+
+3. Errors (revisited): As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
+Estimate of time needed to complete:2hr
+
+Start time: 7pm
+
+Finish time:11pm
+
+Actual time needed to complete: 4hr
 
 
 ## Credit and Collaborations
+
+mahmoud
