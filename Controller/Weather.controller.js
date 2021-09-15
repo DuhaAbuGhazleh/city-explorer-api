@@ -11,11 +11,11 @@ const axios = require('axios');
 let handleWeather= async (req,res)=>{
     let lat=req.query.lat;
     let lon=req.query.lon;
-  const city_name = req.query.city_name;
+  //const city_name = req.query.city_name;
   
     
     
-    let url=`https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&city_name=${city_name}&key=${process.env.WEATHERBIT_API_KEY}`; 
+    let url=`https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&key=${process.env.WEATHERBIT_API_KEY}`; 
     //key come from .env file 
     let axiosResponse= await axios.get(url);
      //asyn will wait for axios response and inside the (get) we send data we need
