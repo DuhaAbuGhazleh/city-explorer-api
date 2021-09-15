@@ -6,15 +6,15 @@ const axios=require("axios");
 require('dotenv').config();
 app.use(cors());
 
-const weather=require('./data/weather.json');
+//const weather=require('./data/weather.json');
 const PORT=process.env.PORT;
 
 
 //lab07///
-app.get('/',(req,res)=>{
+// app.get('/',(req,res)=>{
 
-    res.status(200).send("The Weather");
-});
+//     res.status(200).send("The Weather");
+// });
 
 
 // class Forecast {
@@ -63,9 +63,11 @@ app.get('/',(req,res)=>{
 let handleWeather= async (req,res)=>{
   let lat=req.query.lat;
   let lon=req.query.lon;
+const city_name = req.query.city_name;
+
   
   
-  let url=`https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&key=${process.env.WEATHERBIT_API_KEY}`; 
+  let url=`https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&city_name=${city_name}&key=${process.env.WEATHERBIT_API_KEY}`; 
   //key come from .env file 
   let axiosResponse= await axios.get(url);
    //asyn will wait for axios response and inside the (get) we send data we need
@@ -91,13 +93,14 @@ class ForeCast{
 /////the first attempt for movies //////
 
 const moviesControl= async (req, res)=>{
-  let city = req.query.city
+  
+  const city = req.query.city;
  let urlMove=`https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${city}`
 
  let movieResponse=await axios.get(urlMove);
  let movieData=movieResponse.data;
  let cleanedMovie=movieData.results.map(item=>{
-   return new Moviefilm(item.average_votes,item.vote_count,item.backdrop_path,item.popularity,item.release_date);
+   return new Moviefilm(item.title,item.vote_count,item.image_url,item.popularity,item.release_date);
  })
   
  res.status(200).json(cleanedMovie);
@@ -107,10 +110,11 @@ app.get('/movies',moviesControl )
 
 // Model
 class Moviefilm{
-  constructor(vote_average,vote_count,backdrop_path,popularity,release_date){
-    this.average_votes = vote_average;
+  constructor(title,vote_count,image_url,popularity,release_date){
+    this.title=title;
+    
         this.vote_count = vote_count;
-        this.image = backdrop_path;
+        this.image_url = image_url;
         this.popularity = popularity;
         this.released_date = release_date;
   }
