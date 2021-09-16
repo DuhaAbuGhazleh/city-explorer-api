@@ -1,6 +1,7 @@
 "use strict";
 
 const axios = require('axios');
+const Weathermodel=require("../Models/Weather.models");
 
 
 //lab08 weather Forcast//////
@@ -21,7 +22,7 @@ let handleWeather= async (req,res)=>{
      //asyn will wait for axios response and inside the (get) we send data we need
     let weatherData=axiosResponse.data;
     let cleanedData=weatherData.data.map(item=>{
-        return new ForeCast(item.datetime,item.weather.description);
+        return new Weathermodel(item.datetime,item.weather.description);
     })
     res.status(200).json(cleanedData);
   }

@@ -1,7 +1,6 @@
 "use strict";
 
 
-
 // Model
 class Moviefilm{
     constructor(title,vote_count,image_url,popularity,release_date){
