@@ -2,11 +2,12 @@
 const express=require('express');
 const app=express();
 const cors = require('cors');
+app.use(cors());
 const axios=require("axios");
 require('dotenv').config();
-app.use(cors());
 
-const PORT=process.env.PORT;
+
+const PORT=process.env.PORT || 8000;
 
 const movieController=require("./Controller/Movie.controller");
 const weatherController=require("./Controller/Weather.controller")

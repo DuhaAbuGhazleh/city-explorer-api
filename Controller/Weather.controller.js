@@ -2,7 +2,9 @@
 
 const axios = require('axios');
 const Weathermodel=require("../Models/Weather.models");
+const WEATHERBIT_API_KEY = process.env.WEATHER_API_KEY
 
+const { response } = require('express');
 
 //lab08 weather Forcast//////
 ///WEATHER FORCAST//
@@ -12,7 +14,7 @@ const Weathermodel=require("../Models/Weather.models");
 let handleWeather= async (req,res)=>{
     let lat=req.query.lat;
     let lon=req.query.lon;
-  //const city_name = req.query.city_name;
+  //const city_name = req.query.city;
   
     
     

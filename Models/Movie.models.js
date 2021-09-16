@@ -3,14 +3,15 @@
 
 // Model
 class Moviefilm{
-    constructor(title,vote_count,image_url,popularity,release_date){
-      this.title=title;
-      
-          this.vote_count = vote_count;
-          this.image_url = image_url;
-          this.popularity = popularity;
-          this.released_date = release_date;
-    }
+  constructor(release_date, title, overview, vote_average, vote_count, poster_path) {
+    this.release_date = release_date,
+      this.title = title,
+      this.overview = overview,
+      this.vote_average = vote_average,
+      this.vote_count = vote_count,
+      this.poster_path = poster_path
+
+  }
   }
 
   module.exports=Moviefilm;
