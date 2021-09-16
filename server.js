@@ -9,6 +9,11 @@ require('dotenv').config();
 
 const PORT=process.env.PORT || 8000;
 
+app.get('/',(req,res)=>{
+
+    res.status(200).send("The Weather");
+});
+
 const movieController=require("./Controller/Movie.controller");
 const weatherController=require("./Controller/Weather.controller")
 
