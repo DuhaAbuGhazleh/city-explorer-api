@@ -71,8 +71,37 @@ Finish time:3pm
 
 Actual time needed to complete: 30min
 
+6- Refactor: Modularize the back-end codebase.
+
+Estimate of time needed to complete:30 min
+
+Start time: 2:30pm
+
+Finish time:3pm
+
+Actual time needed to complete: 30min
 
 
+7- As a user, I want the application to work with recent results, so that I can see info without the app doing unnecessary API calls.
+
+Estimate of time needed to complete:30 min
+
+Start time: 2:30pm
+
+Finish time:3pm
+
+Actual time needed to complete: 30min
+
+
+8 -STRETCH: As a user of City Explorer, I want to see info about restaurants in the city I searched, so that I find the best places to eat.
+
+Estimate of time needed to complete:30 min
+
+Start time: 2:30pm
+
+Finish time:3pm
+
+Actual time needed to complete: 30min
 
 
 ## Credit and Collaborations
