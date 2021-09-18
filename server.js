@@ -16,11 +16,13 @@ app.get('/',(req,res)=>{
 
 const movieController=require("./Controller/Movie.controller");
 const weatherController=require("./Controller/Weather.controller")
+const restaurantController=require("./Controller/Restaurants.controller")
+
 
 
 app.get('/weather',weatherController)
-
 app.get('/movies',movieController )
+app.get('/yelp',restaurantController)
 
 app.listen(PORT,()=>{
   console.log(`listening to port ${PORT}`)
